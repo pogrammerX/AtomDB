@@ -47,6 +47,27 @@ namespace AtomDB
             };
         }
 
+        public void Save(string path)
+        {
+            MemoryStream stream = new MemoryStream();
+            var bw = new BinaryWriter(stream);
+            bw.Write(database.LongCount());
+            for (long i = 0; i < database.LongCount(); i++)
+            {
+                var key = database.ToArray()[i].Key;
+                var value = database.ToArray()[i].Value;
+
+                bw.Write(key.Length);
+                bw.Write(key);
+
+                bw.Write(value.Length);
+                bw.Write(value);
+            }
+            File.WriteAllBytes(path, stream.ToArray());
+            bw.Dispose();
+            stream.Dispose();
+        }
+
         public byte[] GetBytes(byte[] key)
         {
             if (!database.ContainsKey(key)) throw new("Key was not found.");
