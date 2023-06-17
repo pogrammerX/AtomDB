@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>AtomDB</AssemblyName>
+    <Authors>pogrammerX</Authors>
+    <Product>Atom Database System</Product>
+    <PackageProjectUrl>https://github.com/pogrammerX/AtomDB</PackageProjectUrl>
+  </PropertyGroup>
+
+</Project>
