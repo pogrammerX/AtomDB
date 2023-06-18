@@ -1,7 +1,7 @@
 # AtomDB
 ## High Speed DataBase System
 
-AtomDB (originally developped for AvRate's Master Bot by me) is a high speed database system.
+AtomDB (originally developped for RateBit by me) is a high speed database system.
 
 # Usage
 Load DataBase:
