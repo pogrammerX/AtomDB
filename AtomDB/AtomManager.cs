@@ -23,7 +23,7 @@ namespace AtomDB
         public static void Initialize()
         {
             Initialized = true;
-
+            return; // todo: fix
             Atom a = Atom.Create();
             AtomMT b = AtomMT.Create();
             Stopwatch sw = new();
